@@ -3,6 +3,7 @@ package app;
 public class Main {
     public static void main(String[] args) {
 
+        // --- Converter ---
         double kg = 10;
         double lb = Converter.kgToLb(kg);
 
@@ -19,5 +20,27 @@ public class Main {
         System.out.println(lbInput + " lb = " + kgResult + " kg");
         System.out.println(c + " C = " + f + " F");
         System.out.println(f2 + " F = " + c2 + " C");
+
+        // --- Customer ---
+        Customer customer = getCustomer(getData());
+
+        String output = "Customer: " + customer.getName() +
+                ", phone: " + customer.getPhone();
+
+        getOutput(output);
+    }
+
+    // --- Customer helpers ---
+
+    public static String[] getData() {
+        return new String[]{"Mike", "+380501234567"};
+    }
+
+    public static Customer getCustomer(String[] data) {
+        return new Customer(data[0], data[1]);
+    }
+
+    public static void getOutput(String output) {
+        System.out.println(output);
     }
 }
