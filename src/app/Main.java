@@ -3,13 +3,13 @@ package app;
 public class Main {
     public static void main(String[] args) {
 
-        double km = 16.0;
-        double miles = Converter.kmToMiles(km);
+        double kg = 10;
+        double lb = Converter.kgToLb(kg);
 
-        double milesInput = 10.0;
-        double kmResult = Converter.milesToKm(milesInput);
+        double lbInput = 22;
+        double kgResult = Converter.lbToKg(lbInput);
 
-        System.out.println(km + " km = " + miles + " miles");
-        System.out.println(milesInput + " miles = " + kmResult + " km");
+        System.out.println(kg + " kg = " + lb + " lb");
+        System.out.println(lbInput + " lb = " + kgResult + " kg");
     }
 }
