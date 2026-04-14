@@ -16,16 +16,19 @@ public class Main {
         double f2 = 77;
         double c2 = Converter.fahrenheitToCelsius(f2);
 
-        System.out.println(kg + " kg = " + lb + " lb");
-        System.out.println(lbInput + " lb = " + kgResult + " kg");
-        System.out.println(c + " C = " + f + " F");
-        System.out.println(f2 + " F = " + c2 + " C");
+        System.out.println(String.format("%s kg = %s lb", kg, lb));
+        System.out.println(String.format("%s lb = %s kg", lbInput, kgResult));
+        System.out.println(String.format("%s C = %s F", c, f));
+        System.out.println(String.format("%s F = %s C", f2, c2));
 
         // --- Customer ---
         Customer customer = getCustomer(getData());
 
-        String output = "Customer: " + customer.getName() +
-                ", phone: " + customer.getPhone();
+        String output = String.format(
+                "Customer: %s, phone: %s",
+                customer.getName(),
+                customer.getPhone()
+        );
 
         getOutput(output);
     }
@@ -43,4 +46,4 @@ public class Main {
     public static void getOutput(String output) {
         System.out.println(output);
     }
-}
+}}
